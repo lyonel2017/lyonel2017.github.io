@@ -4,59 +4,339 @@
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <title>Lionel Blatter</title>
-  </head>
+    <link rel="stylesheet" href="templates/css/styles.css">
+    </head>
 
-  <body>
+    <body>
 
-    <h1>Lionel Blatter</h1>
+      <main>
+	<h1>Lionel Blatter</h1>
 
-    <!-- <img src="Lionel_Blatter.jpeg" style="padding-right:10px; padding-bottom:10px; float:left;" alt=''; height=200> -->
+	<h2>About me</h2>
 
-      <p>
-	I am a post-doctoral researcher at the
-	<a href="http://www.mpi-sp.org/">Max Planck Institute for
-	Security and Privacy</a>, Bochum, Germany, lead by Phd. Gilles Barthe.
-	My research interests include
-	programming languages and program verification, security,
-	privacy, and cryptography.
-      </p>
+	<p>
+	  I am a post-doctoral researcher at the
+	  <a href="http://www.mpi-sp.org/">Max Planck Institute for Security and Privacy</a>,
+	  Bochum, Germany, in the group of
+	  <a href=https://www.mpi-sp.org/barthe> Dr. Gilles Barthe</a>.
+	</p>
 
+	<p>
+	  Prior to my position a the Max Planck Institute, I was a post-doctoral researcher at
+	  Karlsruhe Institute of Technology (KIT),
+	  Karlsruhe, Germany, in the
+	  <a href="https://formal.kastel.kit.edu/index.phtml?lang=en">
+	    Application-oriented Formal Verification group
+	  </a>
+	  lead by
+	  <a href="https://formal.kastel.kit.edu/beckert/index.phtml">Prof. Dr. Bernard Beckert</a>.
+	</p>
 
-      <p>
-	Prior to MPI-SP, I was a post-doctoral researcher at
-	<a href="https://www.kit.edu/english/">Karlsruhe Institute of Technology</a>,
-	  Karlsruhe, Germany, in the applied formal method group
-	lead by Prof. Bernard Bekerte.
-	My worke focus on Session-Types and Taint Analysis.
+	<p>
+	  Before joining the Application-oriented Formal Verification group, I was a Phd
+	  student at
+	  University of Paris Saclay
+	  <!-- <a href="https://www.universite-paris-saclay.fr/">University of Paris Saclay</a>, -->
+	  France,
+	  under the supervision of
+	  <a href="https://www.researchgate.net/profile/Pascale_Gall"> Pascale Le Gall</a>,
+	  <a href="https://nikolai-kosmatov.eu/"> Nikolai Kosmatov</a> and
+	  <a href="https://www.researchgate.net/profile/Virgile-Prevosto"> Virgile Prevosto</a>.
+	</p>
 
-      <p>
-        I received a Ph.D. in
-        Computer Science from the
-        <a href="https://www.universite-paris-saclay.fr/">University of Paris Saclay</a>, France, in
-        2017.
-      </p>
+	<h2>Research</h2>
 
-      <h3>Projects</h3>
-      <div>
-	<a href="https://formosa-crypto.org/">Formosa</a>
-      </div>
+	<p>
+	  My research interests include formal methods, programming languages,
+	  safety and security of software and hardware.
+	</p>
 
+	<h3>Postdoc at Max Planck Institute (Since september 2022)</h3>
 
-      
-      <h3>Publications</h3>
-      <div>
-	<a href="https://dblp.uni-trier.de/pid/182/2042.html">DBLP</a>
-      </div>
+	<p>
+	  I am currently working on the
+	  <a href="https://github.com/EasyCrypt/easycrypt"> EasyCrypt</a>
+	  tool for Computer-Aided Cryptographic Proofs
+	  and the
+	  <a href="https://github.com/jasmin-lang/jasmin"> Jasmin</a>
+	  compiler.
+	  Both are part of the <a href="https://formosa-crypto.org/">Formosa</a>
+	  project.
+	</p>
 
+	<h3>Postdoc at Karlsruhe Institute of Technology (2020-2022)</h3>
 
+	<p>
+	  My research at the Application-oriented Formal Verification group
+	  can be resumed by the following items:
+	</p>
+	<ul>
+	  <li>
+	    <p>
+	      <em>Formal verification of scientific software: </em>
+	      Usually scientific software is written in low-level
+	      languages like C, uses message
+	      passing libraries for parallelisation, and
+	      relies on floating-point arithmetic for real
+	      abstraction.
+	      This implies that scientific software is
+	      susceptible to programming errors, and
+	      interesting for formal methods.
+	      My research focused on the following two points:
+	    </p>
+	    <ul>
+	      <li>
+		<p>
+		  The developed of a tool called
+		  <a href="https://github.com/lyonel2017/Frama-C-MPI-V">MPI-V</a>,
+		  which combines multi-party session types and
+		  verification conditions generation for verifying
+		  the absence of deadlocks,
+		  session fidelity and functional correcness of distributed C programs
+		  (using MPI) for any number of participant.
+		</p>
+	      </li>
+	      <li>
+		<p>
+		  An automatic synthesis of preconditions for floating-point functions.
+		  The generated preconditions guarantee that user-provided accuracy
+		  requirements are satisfied, i.e. avoiding unreliable numerical computations due to
+		  aggregated roundoff errors caused by floating-point arithmetic
+		  <a href="https://doi.org/10.1007/978-3-030-99524-9_16" class="ressource">[3]</a>.
+		</p>
+	      </li>
+	    </ul>
+	  <li>
+	    <p>
+	      <em>Soundness proof of relational verification using verification condition generation: </em>
+	      A <a href="https://github.com/lyonel2017/Relational-Spec">formalization</a>
+	      and soundness proofs, in the Coq proof assistant,
+	      of relational verification using verification condition generation
+	      and relational function contracts, for programs with recursive function
+	      calls and pointers
+	      <a href="https://arxiv.org/pdf/2202.10349.pdf" class="ressource">[1]</a>,
+	      <a href="https://arxiv.org/pdf/2401.08385.pdf" class="ressource">[2]</a>.
+	    </p>
+	  </li>
+	  <li>
+	      <p>
+	          <em>Tain analysis for sh scripts: </em>
+		  The developpement of a tool for taint analysis
+		  of shell scripts. The tool checks for information leakage using a
+		  user-specified definition of leakage.
+		  <!-- Similar tool exists, like <a ref="https://perldoc.perl.org/perlsec">perlsec</a> -->
+	          <!-- for taint analysis for perl. -->
+	        </p>
+	    </li>
+	  </ul>
 
-      <h3>Contact</h3>
-      <div>
-	<p> Email: firstname.lastname@mpi-sp.org</p>
-	<p> address: MPI-SP, Universitaetsstr. 140, 44799 Bochum, Germany<br>
-	  </p>    
-	</div>
+	  <h3>Phd thesis (2015-2019)</h3>
 
+	  <p>
+	    During my <a href="https://theses.hal.science/tel-02401884">PhD</a>
+	    I worked on the formal verification
+	    of relational properties.
+	    <!-- Relational properties -->
+	    <!-- are an extension of Hoare Triple where -->
+	    <!-- a sequence of programs c<sub>1</sub>, ...., c<sub>n</sub> is linked such that -->
+	    <!-- {P}c<sub>1</sub>, ...., c<sub>n</sub>{Q} i.e. -->
+	    <!-- if each program c<sub>i</sub> start from a state s<sub>1</sub>, -->
+	    <!-- such that P(s<sub>1</sub>, ...., s<sub>n</sub>) -->
+	    <!-- hold, and terminates in a state s'<subs>i</sub>, then -->
+	    <!-- Q(s<sub>1</sub>', ...., s<sub>n'</sub>) hold. -->
+	    <!-- Relational properties can express more -->
+	    <!-- advanced properties of a given program, such as non-interference, -->
+	    <!-- continuity, or monotonicity. -->
+	    <!-- They can also relate different version of a program, -->
+	    <!-- for instance to show that an -->
+	    <!-- optimized implementation is equivalent to its original counterpart. -->
+	    My research focused on the support of relational properties
+	    in the <a href="https://frama-c.com/">Frama-C</a> platform i.e.
+	    in the context of the C language and the specification
+	    language
+	    <a href="https://frama-c.com/download/acsl.pdf">ACSL</a>.
+	    The work can be summarised by the following points:
+	  </p>
+	  <ul>
+	    <li>
+	      Extention for the ACSL specification language to support relational properties.
+	    </li>
+	    <li>
+	      Designe of relational contract based verification approaches, that
+	      can be integrated into standard contract based verification of programs.
+	    </li>
+	    <li>
+	      Implementation of the two previous points into a Frama-C plugin called
+	      <a href="https://github.com/lyonel2017/Frama-C-RPP">RPP</a>
+	      <a href="https://arxiv.org/pdf/1606.00678.pdf" class="ressource">[4]</a>,
+	      <a href="https://arxiv.org/pdf/1801.06876v2.pdf" class="ressource">[5]</a>.
+	    </li>
+	  </ul>
+
+	  <h2>Publications</h2>
+
+	  <h2>2022</h2>
+	  <ul class="pub">
+	    <li>
+	      Lionel Blatter,
+              <a href="https://nikolai-kosmatov.eu/">Nikolai Kosmatov</a>,
+              <a href="https://www.researchgate.net/profile/Pascale_Gall">Pascale Le Gall</a>,
+	      Virgile Prevosto.<br />
+	      An Efficient VCGen-Based Modular Verification of Relational Properties.<br />
+	      In ISoLA 2022.<br />
+	      <a href="https://doi.org/10.1007/978-3-031-19849-6_28" class="ressource">[doi]</a>
+	      <a href="https://arxiv.org/pdf/2401.08385.pdf" class="ressource">[pdf]</a>
+	    </li>
+	    <li>
+	      Lionel Blatter,
+	      <a href="https://nikolai-kosmatov.eu/">Nikolai Kosmatov</a>,
+	      <a href="https://www.researchgate.net/profile/Pascale_Gall">Pascale Le Gall</a>,
+	      Virgile Prevosto.<br />
+	      Certified Verification of Relational Properties.<br />
+	      In IFM 2022.<br />
+	      <a href="https://doi.org/10.1007/978-3-031-07727-2_6" class="ressource">[doi]</a>
+	      <a href="https://arxiv.org/pdf/2202.10349.pdf" class="ressource">[pdf]</a>
+	    </li>
+	    <li>
+	      Jonas Krämer,
+              Lionel Blatter,
+              <a href="https://www.it.uu.se/katalog/evada737">Eva Darulova</a>,
+              <a href="https://formal.kastel.kit.edu/ulbrich/">Mattias Ulbrich</a>.<br />
+	      Inferring Interval-Valued Floating-Point Preconditions.<br />
+	      In TACAS 2022.<br />
+	      <a href="https://doi.org/10.1007/978-3-030-99524-9_16" class="ressource">[doi]</a>
+	    </li>
+	  </ul>
+
+	  <h2>2019</h2>
+	  <ul class="pub">
+	    <li>
+	      Lionel Blatter<br />
+	      Relational properties for specification and verification
+	      of C programs in Frama-C<br />
+	      PhD thesis, Université Paris-Saclay.<br />
+	      <a href="https://theses.hal.science/tel-02401884v1/document" class="ressource">[pdf]</a>
+	    </li>
+	  </ul>
+
+	  <h2>2018</h2>
+	  <ul class="pub">
+	    <li>
+	      Lionel Blatter,
+	      <a href="https://nikolai-kosmatov.eu/">Nikolai Kosmatov</a>,
+	      <a href="https://www.researchgate.net/profile/Pascale_Gall">Pascale Le Gall</a>,
+	      Virgile Prevosto.<br />
+	      Static and Dynamic Verification of Relational Properties on
+	      Self-composed C Code.<br />
+	      In TAP 2018.<br />
+	      <a href="https://doi.org/10.1007/978-3-319-92994-1_3" class="ressource">[doi]</a>
+	      <a href="https://arxiv.org/pdf/1801.06876v2.pdf" class="resource">[pdf]</a>
+	    </li>
+	  </ul>
+
+	  <h2>2017</h2>
+	  <ul class="pub">
+	    <li>
+	      Lionel Blatter,
+	      <a href="https://nikolai-kosmatov.eu/">Nikolai Kosmatov</a>,
+	      <a href="https://www.researchgate.net/profile/Pascale_Gall">Pascale Le Gall</a>,
+	      Virgile Prevosto.<br />
+	      RPP: Automatic Proof of Relational Properties by Self-composition.<br />
+	      In TACAS 2017.<br />
+	      <a href="https://doi.org/10.1007/978-3-662-54577-5_22" class="ressource">[doi]</a>
+	      <a href="https://arxiv.org/pdf/1606.00678.pdf" class="ressource">[pdf]</a>
+	    </li>
+	  </ul>
+
+	  <h2>Talk</h2>
+	  <ul class="pub">
+	    <li>
+	      Lionel Blatter,
+	      <a href="https://nikolai-kosmatov.eu/">Nikolai Kosmatov</a>,
+	      <a href="https://www.researchgate.net/profile/Pascale_Gall">Pascale Le Gall</a>,
+	      Virgile Prevosto.<br />
+	      RPP : Preuve automatique de propriétés relationnelles par Self-Composition<br />
+	      In AFADL 2018.<br />
+	      <a href="https://cea.hal.science/cea-01835491v1/file/rpp.pdf" class="ressource">[pdf]</a>
+	    </li>
+	  </ul>
+
+	  
+	  <h2>Teaching</h2>
+
+	  <ul>
+	    <li>
+	      <p>
+		"Assistant Temporaire à l'Ensegnement et la Recherche"
+		(temporary teaching and research fellow)
+		at Univ. Paris Sud, Orsay in Computer Science in 2019
+		(128 hours of lectures or 192 hours of  "travaux dirigés" or
+		288 hours of "travaux pratiques" per year, or any equivalent combination).
+	      </p>
+
+	      <p>
+		Teaching has been done in the following courses:
+		<ul>
+		  <li>Introduction to Logic.</li>
+		  <li>Security of information and communication systems.</li>
+		  <li>Introduction to object programming.</li>
+		  <li>Introduction to imperative programming.</li>
+		  <li>Advanced imperative programming.</li>
+		  <li>Introduction to functional programming.</li>
+		  <li> Introduction to computer graphics.</li>
+		</ul>
+	      </p>
+	    </li>
+	    
+	    <li>
+	      Lecture on Constraint programming in Prolog
+	      at ISTY (Univ. Versailles-SQY) in Vélizy
+	      <a href="https://github.com/lyonel2017/Programmation_logique_et_Prolog"> (git)</a>.
+	    </li>
+
+	    <li>
+	      Various teaching activities in Computer Science at:
+	      <ul>
+		<li>Karlsruhe Institute of Technology, Germany. </li>
+		<li>UPEC in Créteil, France.</li>
+		<li>ENSIIE in Evry, France.</li>
+	      </ul>
+	    </li>
+
+	  </ul>
+
+	  <h2>Supervised Projects and Theses</h2>
+	  <ul>
+	    <li>
+	      Bachelor-Thesis of Maximilian von Gaisberg.
+	      "Formal Verificationn of Sorting Algorithms with Frama-C."
+	    </li>
+	    <li>
+	      Research internship of Tobias Hombücher.
+	      "Verification of distributed system with Frama-C/MPIV."
+	    </li>
+	    <li>
+	      Master-Thesis of Jonas Krämer.
+	      "Inferring Interval-Valued Floating-Point Preconditions."
+	    </li>
+	  </ul>
+
+	  <h2>Contact</h2>
+	  <div>
+	    <p> Email: firstname [dot] lastname [at] mpi-sp [dot] org </p>
+	    <p> address: MPI-SP, Universitaetsstr. 140, 44799 Bochum, Germany </p>
+	  </div>
+
+	</main>
+
+	<footer>
+	  <ul>
+	    <small>
+	      <br> Last updated on 18 february 2024</br>
+	      <br>Font <a href="http://www.luciole-vision.com">Luciole</a></br>
+	      <br>Theme <a href="https://github.com/Scribouilli/mimoza">Mimoza</a></br>
+	    </small>
+	  </ul>
+	</footer>
       </body>
-
-      </html>
+    </html>
