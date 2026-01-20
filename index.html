@@ -55,22 +55,81 @@
 	</h3>
 
 	<p>
-	  I am currently working on the
-	  <a href="https://github.com/EasyCrypt/easycrypt"> EasyCrypt</a>
-	  tool for Computer-Aided Cryptographic Proofs
-	  and the
-	  <a href="https://github.com/jasmin-lang/jasmin"> Jasmin</a>
-	  compiler.
-	  Both are part of the <a href="https://formosa-crypto.org/">Formosa</a>
-	  project.
+	  My research at the Max Planck Institute for Security and Privacy
+	  and <a href="https://formosa-crypto.org/">Formosa Crypto</a>
+	  can be resumed by the following items:
 	</p>
 
+	<ul>
+	  <li>
+	    <em>(Speculative) Constant Time</em>:
+	    Constant Time (CT) and Speculative Constant Time (SCT) are
+	    information flow policy that ensures that programs are protected
+	    against timing side-channel attacks (SCT consider <em>Spectre</em>
+	    attacks which exploide speculation of hardware).
+	    My research focused on the following points:
+	    <ul>
+	      <li>
+		Proving compiler preservation of SCT
+		(<a href="https://eprint.iacr.org/2024/1203.pdf">pdf</a>).
+	      </li>
+	      <li>
+		Proving SCT using programme
+		transformation
+		(<a  href="https://arxiv.org/pdf/2510.11573">pdf</a>).
+	      </li>
+	      <li>
+		Decompiling for CT analysis
+		(<a href="https://arxiv.org/pdf/2501.04183">pdf</a>).
+	      </li>
+	    </ul>
+	  </li>
+	  <li>
+	    <em> Jasmin and Easycrypt</em>:
+	    <a href="https://github.com/jasmin-lang/jasmin"> Jasmin</a> is a
+	    certified compiler for writing high-assurance and high-speed
+	    cryptography code, and
+	    <a href="https://github.com/EasyCrypt/easycrypt"> EasyCrypt</a> is
+	    a proof assistant for Computer-Aided Cryptographic Proofs.
+    	    My research focused primarily on the following points:
+	    <ul>
+	      <li>
+		The <em>Jazzline</em> tooling for composable functional
+		correctness proofs for Jasmin programs. The work combines
+		the Jasmin compiler with Easycrypt and Cryptoline
+		(<a href="https://doi.org/10.1145/3719027.3744814" class="ressource">pdf</a>).
+		This work inspired me to extend the <em>nsatz</em>
+		tactic in Rocq, resulting in the
+		<a href="https://rocq-prover.org/doc/master/refman/addendum/nsatz.html#rocq:tacn.ensatz">ensatz</a>
+		tactic.
+	      </li>
+	      <li>
+		  Formalizing cryptographic security with interaction trees
+		  and proving compiler preservation with relational hoare logic
+		  (<a href="https://arxiv.org/pdf/2511.11292">pdf</a>).
+	      </li>
+	      <li>
+		Currently, I'm working on the generation and verification of
+		annotations for safty verification in Jasmin.
+	      </li>
+	    </ul>
+	  </li>
+
+	  <li>
+	      Recently, I started to work on the Rocq library
+	      <a href="https://github.com/formosa-crypto/xhl">xhl</a>,
+	      which includes the mecanization of different (probabilistic) (relational)
+	      hoare logics, and associate soundness and complitness proofs.
+	  </li>
+	</ul>
+	
 	<p>
 	  Keywords:
-	  certified compiler, decompilation,
-	  semantics of probabilistic programs, iteraction trees,
+	  certified compilation,
+	  semantics of probabilistic programs,
 	  relational hoare logic, none-interference
-	  (constante time and speculative constante time).
+	  (constante time and speculative constante time),
+	  cryptography.
 	</p>
 
 
@@ -102,7 +161,7 @@
 		  which combines multi-party session types and
 		  verification conditions generation for verifying
 		  the absence of deadlocks,
-		  session fidelity and functional correcness of distributed C programs
+		  session fidelity and functional correctness of distributed C programs
 		  (using MPI) for any number of participant.
 		</p>
 	      </li>
@@ -138,6 +197,13 @@
 	  </li>
 	  </ul>
 
+	<p>
+	  Keywords:
+	  deductive verification, distributed programs,
+	  multi-party session types, relational hoare logic,
+	  floating point computations, taint analysis.
+	</p>
+
 	  <h3>Phd thesis (2015-2020)</h3>
 
 	  <p>
@@ -170,10 +236,40 @@
 	  <h2>Publications</h2>
 
 	  <h2>2025</h2>
-
-	 <!-- Add the OPSLA paper --> 
 	  
 	  <ul class="pub">
+	    <li>
+	      The Jasmin Compiler Preserves Cryptographic Security.<br />
+	      Santiago Arranz-Olmos,
+	      Gilles Barthe,
+	      Lionel Blatter,
+	      Benjamin Grégoire,
+	      Vincent Laporte,
+	      Paolo Torrini. <br />
+	      Preprint.<br />
+	      <a href="https://arxiv.org/pdf/2511.11292">[pdf]</a>
+	    </li>
+	    <li>
+	      (Dis)Proving Spectre Security with Speculation-Passing Style.<br />
+	      Santiago Arranz-Olmos,
+	      Gilles Barthe,
+	      Lionel Blatter,
+	      Xingyu Xie,
+	      Zhiyuan Zhang.<br />
+	      Preprint.<br />
+	      <a href="https://arxiv.org/pdf/2510.11573">[pdf]</a>
+	    </li>
+	    <li>
+	      Decompiling for Constant-Time Analysis.<br />
+	      Santiago Arranz-Olmos,
+	      Gilles Barthe,
+	      Lionel Blatter,
+	      Youcef Bouzid,
+	      Sören van der Wall,
+	      Zhiyuan Zhang.<br />
+	      Preprint.<br />
+	      <a href="https://arxiv.org/pdf/2501.04183">[pdf]</a>
+	    </li>
 	    <li>
 	      Jazzline: Composable CryptoLine functional correctness proofs
 	      for Jasmin programs.<br />
@@ -214,6 +310,7 @@
               <a href="https://nikolai-kosmatov.eu/">Nikolai Kosmatov</a>,
 	      Virgile Prevosto,
 	      Virgile Robles.<br />
+	      Chapter in Guide to Software Verification with Frama-C.<br />
 	      <a href="https://link.springer.com/chapter/10.1007/978-3-031-55608-1_10" class="ressource">[doi]</a>
 	    </li>
 	  </ul>
@@ -299,7 +396,7 @@
 	      <a href="https://nikolai-kosmatov.eu/">Nikolai Kosmatov</a>,
 	      <a href="https://www.researchgate.net/profile/Pascale_Gall">Pascale Le Gall</a>,
 	      Virgile Prevosto.<br />
-	      In AFADL 2018.<br />
+	      AFADL 2018.<br />
 	      <a href="https://cea.hal.science/cea-01835491v1/file/rpp.pdf" class="ressource">[pdf]</a>
 	    </li>
 	  </ul>
